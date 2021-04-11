@@ -52,6 +52,8 @@ def main(args):
     ile = 20
     lista = generuj_liste(20)
     print(sorted(lista))
+    print(max(lista, key = lista.count))
+    print(lista.count(max(lista, key = lista.count)))
     policz_elementy2(lista, ile)
     return 0
 
