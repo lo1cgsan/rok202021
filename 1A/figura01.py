@@ -21,13 +21,31 @@ def figura(bok, ile_b, kat):
         turtle.right(kat)
 
 
+def funkcja(x):
+    a = 1
+    b = 1
+    return a * x + b
+
+
+def wykres_funkcji():
+    lx = list(range(-300, 300, 50))
+    ly = []
+    for x in lx:
+        ly.append(funkcja(x))
+    print(lx)
+    print(ly)
+    
+    for i in range(len(lx) - 1):
+        rysujLinie(lx[i], ly[i], lx[i+1], ly[i+1])
+    
+
 szer = 800
 wys = 600
 
-turtle.setup(900, 500)
-
-rysujLinie(-400, 0, 400, 0)
-rysujLinie(0, -300, 0, 300)
+turtle.setup(szer, wys)
+rysujLinie(-szer / 2, 0, szer / 2, 0)
+rysujLinie(0, -wys / 2, 0, wys / 2)
+wykres_funkcji()
 #figura(100, 4, 90)
 #figura(120, 3, 120)
 turtle.done()
