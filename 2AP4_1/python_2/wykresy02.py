@@ -23,13 +23,12 @@ def main():
     print(y1)
     print(y2)
     
-    return
     plt.grid(True)
     plt.title('Wykres f(x) = a*x + b')
     plt.xticks(range(-10, 11, 2))
-    plt.yticks(y)
+    #plt.yticks(y)
     # plt.plot(x, y, "g*:")
-    plt.plot(x, y, color='r', marker='^', ls='dashed', lw=3)
+    plt.plot(x, y1, color='r', marker='^', ls='dashed', lw=3)
     plt.show()
     return 0
     
