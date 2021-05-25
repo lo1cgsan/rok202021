@@ -1,4 +1,6 @@
 import csv
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 def czytaj_csv(plik, separator=','):
@@ -18,7 +20,24 @@ def main ():
     
     print(nazwy_klas)
     print(srednie)
+    print()
+    ile = np.arange(len(nazwy_klas))
+    print(ile)
+    print()
+    plt.title("Średnie klas")
+    plt.bar(ile, srednie)
+    plt.ylim([0.1, 6.0])
+    plt.xticks(ile, nazwy_klas)
     
+    frek = [float(r[2].strip("%")) / 100 for r in dane]
+    print(frek)
+
+    plt.twinx()
+    plt.plot(frek, color="red")
+    wartosci = plt.yticks()
+    plt.ylabel(['{(x * 100):2.0f}%' for z in wartosci])
+    plt.show()
     return 0
+
     
 main()
