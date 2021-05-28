@@ -13,19 +13,12 @@ def czytaj_csv(nazwa_pliku, separator=','):
 
 
 def main():
-    dane = czytaj_csv('dane_klasa1A.csv',';')
-    print(dane.pop(0))
-    #print(dane)
+    dane = czytaj_csv('dane_wybory.csv',';')
     
-    nazwy_klas = [wiersz[0] for wiersz in dane]
-    srednie = [float(wiersz[1].replace(',', '.')) for wiersz in dane]
-    frekwencje = [float(wiersz[2].strip('%'))/100 for wiersz in dane]
-
-    wsp_x = np.arange(len(srednie))
-    plt.bar(wsp_x, srednie)
+    etykiety = [wiersz[0] for wiersz in dane]
+    glosy = [int(wiersz[1]) for wiersz in dane]
     
-    plt.twinx()
-    plt.plot(frekwencje, "go")
+    plt.pie(glosy, [0.1, 0, 0, 0.05], etykiety)
     
     plt.show()
     return 0
