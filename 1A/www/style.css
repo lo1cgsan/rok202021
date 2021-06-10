@@ -1,0 +1,23 @@
+body {
+    font-family: arial, tahoma, helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #4400E2;
+    color: #FFFFFF;
+}
+
+h1 {
+    font: 2rem Verdana,sans-serif;
+}
+
+h2 {
+    font: 1.7rem Verdana,sans-serif;
+}
+
+a {
+    color: #EEEEEE;
+}
+
+a:hover {
+    text-decoration: none;
+    border: 1px solid yellow;
+}

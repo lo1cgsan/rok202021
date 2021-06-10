@@ -1,6 +1,6 @@
 def main():
     n = int(input("Podaj n: "))
-    p1 = p2 = fib = 1
+    p1 = p2 = 1
     for i in range(3, n + 1):
         fib = p1 + p2
         p2 = p1
@@ -10,8 +10,3 @@ def main():
     return 0
 
 main()
-"""
-1 => 1
-2 => 1
-3 => 2
-"""
